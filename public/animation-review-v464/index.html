@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>足球战术教练 · 精彩动作动画评审</title>
+ <meta name="description" content="十类精彩动作按云端留言修正，并播放新版真实比赛片段；附触发条件和云端留言。">
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ <header class="masthead">
+  <div class="mast-inner">
+   <div class="eyebrow">FOOTBALL TACTICS · ANIMATION REVIEW</div>
+   <h1>精彩动作<span>逐项评审</span></h1>
+   <p>首批 10 类动作 · 十场原生比赛实测 · 每段取自完整模拟比赛的真实结算位置、球路与结果</p>
+   <div class="headline-stats"><div><strong>10</strong><span>本期身体动画</span></div><div><strong>23</strong><span>游戏保留动作</span></div><div><strong>10</strong><span>模拟比赛</span></div></div>
+  </div>
+ </header>
+ <main>
+  <section class="intro">
+   <div><h2>边看，边留下意见</h2><p>这 10 项按新留言继续修正轨迹、对手反应和真实结算；比赛先结算，再播放已确认的结果。卡片仍可直接留言，云端旧留言会保留。次数来自新版十场完整比赛。</p><p><a href="../game-v4-64/" class="game-link">打开新版比赛</a>　<a href="../animation-review-v463/?board=e4d14dc0-8e16-40fa-9540-8a1663b85eaa">对照 V4.63</a></p></div>
+   <div class="board-status"><span id="cloud-indicator" class="status-dot"></span><span id="cloud-status">正在连接云端留言板…</span><small>同一分享链接可在其他设备继续查看</small></div>
+  </section>
+  <div class="toolbar">
+   <div class="filters" role="group" aria-label="筛选动作"><button class="active" data-filter="all">全部 <b id="all-count">10</b></button><button data-filter="individual">个人</button><button data-filter="team">配合</button><button data-filter="defence">防守</button><button data-filter="commented">已留言</button></div>
+   <label class="search"><span>⌕</span><input id="search" type="search" placeholder="搜索动作名称或编号" aria-label="搜索动作名称或编号"></label>
+  </div>
+  <div class="exportbar"><div><strong id="comment-count">0 条留言</strong><span>留言即时写入云端；导出包含各动作编号、条件与所有留言。</span></div><div class="export-actions"><button id="share-board">复制留言板链接</button><button id="export-markdown" class="accent">导出 Markdown</button><button id="export-json">导出 JSON</button></div></div>
+  <div id="cards" class="cards" aria-live="polite"></div>
+  <p class="footnote">评审动画与比赛共用身体动作采样；位置和球路取实战样本。留言不会修改游戏结果。场均值来自固定十场样本，不等于长期概率。</p>
+ </main>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <script type="module" src="./review.bundle.js"></script>
+</body>
+</html>
