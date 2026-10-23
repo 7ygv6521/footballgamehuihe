@@ -1,0 +1,2260 @@
+{
+  "gameVersion": "V4.64",
+  "sourceCommit": "411a9b892e5ce531b050891d653c44d9a86fda8f",
+  "explanation": "数字编号为V4.18历史清单；statusV464按当前runtime独立入口重新标注。历史trigger不是现行规则的权威定义。EX套路不是额外动画。",
+  "numberedActions": [
+    {
+      "id": 1,
+      "name": "带球推进",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "当前实际持球者发生合法移动：主动推进、对方远距逼抢时带走、控球后恢复带离。人球共享推球时间轴。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 2,
+      "name": "无球跑动",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员真实执行已记录的无球移动；持球者不以普通无球跑动代替带球。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "按已批准路径播放；普通队员按个人任务与移动收益决定，8方向、时机和个人预算保持。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 3,
+      "name": "传球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际选择传球；准备姿态在释放点前出现，球在释放时刻立即出脚。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 4,
+      "name": "接球停球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "传球实际到达且接球者赢下接球对抗，接触点之后开始缓冲。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 5,
+      "name": "射门",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际选择射门并触球；争顶或凌空踢空时由相应失败分支覆盖，不算射门触球。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 6,
+      "name": "逼抢靠近",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "取得PRESS任务或主动逼抢并向对方接近；未到达不展示远距离抢断接触。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 7,
+      "name": "抢断夺球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "合法贴身接触的共同对抗中防守者获胜，随后控球带离。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 8,
+      "name": "变向过人",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "持球者在实际对抗中保住球权，通过原地晃动或合法邻格带离摆脱。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 9,
+      "name": "转身护球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际对抗后持球者选择原地保球；地面根位置固定，只改变护球姿态。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 10,
+      "name": "扑空与失衡",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "真实抢球尝试失败；落空者收势恢复，不能伪装碰球。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 11,
+      "name": "传球拦截",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际球路经过防守者可达范围并触发拦截检定；不以直线替代弧线路线。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 12,
+      "name": "射门封堵",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "射门实际线路上的合法封堵尝试，接触时间由路线距离确定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 13,
+      "name": "松球争抢",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "无人控球且实际抵达球点的外场球员参加同一次争抢；快速靠近，接触即拿球，其他人迅速退出。约0.55–0.66秒完成，无高频身体抖动；原结果与最终格不改变。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 14,
+      "name": "门将扑救与控制球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "门将在自身可达范围参与扑救或收球；抱球仅在控住分支。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 15,
+      "name": "进球后的反应",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "旧机制已有的进球表现；只在真实进球之后，未新增阶段动作。",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 16,
+      "name": "铲球与起身",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 17,
+      "name": "传中",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "门前高球攻门准备可覆盖部分传中场面",
+      "historicalStatusV418": "部分覆盖",
+      "historicalCurrentV418": "高球与争顶已有；尚不单独识别边路传中战术",
+      "historicalMissingV418": "独立边路传中选择",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 18,
+      "name": "双方争顶头球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 19,
+      "name": "跟进补射",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 20,
+      "name": "防守解围",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "防守球员赢下实际空中接触",
+      "historicalStatusV418": "部分覆盖",
+      "historicalCurrentV418": "头球解围已有；其他独立解围动作未新增",
+      "historicalMissingV418": "脚下大脚解围决策",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 21,
+      "name": "直塞与前插配合",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "正常传球选择空当/直塞，接球者执行记录的前插；复用传球与跑动姿態时不重复统计别名。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 22,
+      "name": "接应与拉边",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得SUPPORT或SUPPORT_WIDE任务并实际跑动；专项统计见101/102。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 23,
+      "name": "盯人跟跑",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 24,
+      "name": "补位与封锁线路",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 25,
+      "name": "远距离回追压迫",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "远距离防守者执行合法PRESS追赶但未接触，不能触发成功抢断。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 26,
+      "name": "对抗造成球松脱",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "贴身共同对抗结果为loose，双方争球后球失去控制。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 27,
+      "name": "射偏与第二落点响应",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "射门实际射偏及之后独立选择的第二落点争抢。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 28,
+      "name": "门将出击与攻方抢先接球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "禁区内门将与攻方参与同一次可达来球争抢，球权在真实接触之后。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 29,
+      "name": "等待与观察",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "已有静态观察姿态，无事件主动画；本轮不新增等待动作。",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 30,
+      "name": "球权变化后的反应",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "遵照本阶段范围，规则、等待、反应和比赛阶段不新增",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 31,
+      "name": "疲劳姿态",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "旧有低体力静态姿态，仅在原姿态为站立/观察时替换，不覆盖带球和触球。",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 32,
+      "name": "进球后回位与重新开球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "遵照本阶段范围，规则、等待、反应和比赛阶段不新增",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 33,
+      "name": "赛前就位与首次开球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "遵照本阶段范围，规则、等待、反应和比赛阶段不新增",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 34,
+      "name": "中场休息与下半场回位",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "遵照本阶段范围，规则、等待、反应和比赛阶段不新增",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 35,
+      "name": "换人上下场",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "遵照本阶段范围，规则、等待、反应和比赛阶段不新增",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 36,
+      "name": "终场反应",
+      "statusV464": "终场专用入口",
+      "historicalTrigger": "旧有终场表现，本轮不新增阶段逻辑；未进入动作事件的展示不计入当前事件计数。",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 37,
+      "name": "一脚出球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 38,
+      "name": "撞墙式二过一",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 39,
+      "name": "高空长传转移",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 40,
+      "name": "胸部停球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 41,
+      "name": "凌空抽射",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 42,
+      "name": "急停再启动",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 43,
+      "name": "肩部对抗争球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 44,
+      "name": "门将高空争球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 45,
+      "name": "门将发动进攻",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 46,
+      "name": "挑传越过防线",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 47,
+      "name": "倒三角回传",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 48,
+      "name": "横传门前抢点",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 49,
+      "name": "斜向塞球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际传球目标向前且斜跨球场，复用传球主动画；不因斜向类别重复计数。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 50,
+      "name": "背身接球转身",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 51,
+      "name": "迎球顺势带走",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "传向空当并成功接球，批准恢复路径使接球者缓冲后顺势带走。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "已在真实事件中注册并回放",
+      "historicalMissingV418": "无；本轮完善项已接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 52,
+      "name": "接球失误球松脱",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 53,
+      "name": "漏球让队友接",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 54,
+      "name": "假射真传",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 55,
+      "name": "假传真带",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 56,
+      "name": "反向扣球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 57,
+      "name": "人球分过",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 58,
+      "name": "背身回做",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 59,
+      "name": "外脚背弧线传球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 60,
+      "name": "脚后跟传球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 61,
+      "name": "低平抽射",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "能",
+      "historicalStatusV418": "通用动画已覆盖",
+      "historicalCurrentV418": "driven 球路＋5号射门已覆盖",
+      "historicalMissingV418": "没有额外区分抽射专属身体姿态",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 62,
+      "name": "弧线射门",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "能",
+      "historicalStatusV418": "通用动画已覆盖",
+      "historicalCurrentV418": "curve_left / curve_right 射门球路＋5号已覆盖",
+      "historicalMissingV418": "弧线飞行已实现，未另注册独立姿态ID",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 63,
+      "name": "挑射越过门将",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 64,
+      "name": "近门推射",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 65,
+      "name": "点球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "点球判罚后，使用116主罚和既有门将扑救",
+      "historicalStatusV418": "已接入（新版分支）",
+      "historicalCurrentV418": "使用V4.15统一的规则动作，不另抽随机",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 66,
+      "name": "直接任意球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "任意球判罚后，使用115传球或射门",
+      "historicalStatusV418": "已接入（新版分支）",
+      "historicalCurrentV418": "使用V4.15统一的规则动作，不另抽随机",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 67,
+      "name": "任意球人墙封堵",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "任意球射门沿实际球路触发既有12号封堵；专门的人墙跳跃未制作",
+      "historicalStatusV418": "待完善",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 68,
+      "name": "角球近点争顶",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "角球高球传中且实际到达可争顶高度，使用81/82双方头球；不强制指定近点或远点",
+      "historicalStatusV418": "已接入（复用争顶）",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 69,
+      "name": "角球远点争顶",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "角球高球传中且实际到达可争顶高度，使用81/82双方头球；不强制指定近点或远点",
+      "historicalStatusV418": "已接入（复用争顶）",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 70,
+      "name": "界外球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "边线出界后，使用112双手掷球",
+      "historicalStatusV418": "已接入（新版分支）",
+      "historicalCurrentV418": "使用V4.15统一的规则动作，不另抽随机",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 71,
+      "name": "球门球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "进攻方触球出底线后，使用113球门球",
+      "historicalStatusV418": "已接入（新版分支）",
+      "historicalCurrentV418": "使用V4.15统一的规则动作，不另抽随机",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 72,
+      "name": "门将低位扑救",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "能",
+      "historicalStatusV418": "通用动画已覆盖",
+      "historicalCurrentV418": "低球扑救沿用14号门将扑救",
+      "historicalMissingV418": "未按低位／倒地动作分支细分",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 73,
+      "name": "门将高位扑救",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 74,
+      "name": "门将双拳击球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "不能以该独立动作触发",
+      "historicalStatusV418": "当前无对应机制",
+      "historicalCurrentV418": "只有独立预览；游戏没有该动作的选择和结果分支",
+      "historicalMissingV418": "先补机制和触发条件，再接动画；不能强行播放",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 75,
+      "name": "门将脱手后二次抱球",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 76,
+      "name": "单刀门将封堵",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "普通射门可近距离触发门将扑救；尚无独立单刀场景识别",
+      "historicalStatusV418": "暂缓",
+      "historicalCurrentV418": "沿用现有扑救",
+      "historicalMissingV418": "专属单刀识别与前移封堵动画",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 77,
+      "name": "双人夹抢",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "详见下方本轮动作分支",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "真实任务、实际触点和结果分支驱动",
+      "historicalMissingV418": "无；已增加独立动作并接入",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 78,
+      "name": "倒地与恢复",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "实际铲球结果后的起身阶段",
+      "historicalStatusV418": "部分覆盖",
+      "historicalCurrentV418": "铲球倒地与起身已覆盖",
+      "historicalMissingV418": "其他碰撞摔倒判定未新增",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 79,
+      "name": "碰撞犯规后反应",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "身体接触犯规，使用117收势",
+      "historicalStatusV418": "已接入（新版分支）",
+      "historicalCurrentV418": "使用V4.15统一的规则动作，不另抽随机",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 80,
+      "name": "越位停步回位",
+      "statusV464": "旧表编号；现行无独立入口",
+      "historicalTrigger": "出球时越位且随后实际参与；吹停并判间接任意球，不添加等待回位表演",
+      "historicalStatusV418": "规则已接入；独立动画暂缓",
+      "historicalCurrentV418": "原有逻辑与动画保留",
+      "historicalMissingV418": "本轮不扩充",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 81,
+      "name": "进攻争顶",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "第一槽高球未被提前拦截；第二槽球高1.35–2.7米且参与者能接触真实来球；按争顶赢家／未触球选择。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 82,
+      "name": "防守争顶",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "第一槽高球未被提前拦截；第二槽球高1.35–2.7米且参与者能接触真实来球；按争顶赢家／未触球选择。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 83,
+      "name": "争顶未触球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "第一槽高球未被提前拦截；第二槽球高1.35–2.7米且参与者能接触真实来球；按争顶赢家／未触球选择。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 84,
+      "name": "凌空射门",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "高球接续行动，真实来球高0.4–1.3米；可接触且赢下争抢并通过接触准确性检定才射门，否则踢空。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 85,
+      "name": "凌空未踢到",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "高球接续行动，真实来球高0.4–1.3米；可接触且赢下争抢并通过接触准确性检定才射门，否则踢空。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 86,
+      "name": "铲球夺得控制",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际贴身接触；上抢者为非门将，有效逼抢≥65且至少高于盘带6；根据夺球／松球／失败选择，先起身再带走。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 87,
+      "name": "铲球使球松开",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际贴身接触；上抢者为非门将，有效逼抢≥65且至少高于盘带6；根据夺球／松球／失败选择，先起身再带走。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 88,
+      "name": "铲球未成功",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际贴身接触；上抢者为非门将，有效逼抢≥65且至少高于盘带6；根据夺球／松球／失败选择，先起身再带走。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 89,
+      "name": "原地晃动护球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际贴身对抗；持球者非门将且有效盘带≥60；按原地保球／合法邻格带离／丢球选择，晃动只改变身体姿势。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 90,
+      "name": "晃动后变向带离",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际贴身对抗；持球者非门将且有效盘带≥60；按原地保球／合法邻格带离／丢球选择，晃动只改变身体姿势。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 91,
+      "name": "假动作被识破",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际贴身对抗；持球者非门将且有效盘带≥60；按原地保球／合法邻格带离／丢球选择，晃动只改变身体姿势。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 92,
+      "name": "夹抢主抢者",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "仅原地护球对抗：行动开始前已决定护球，持球者接触前不移动；主抢者和第二名防守者从不同相邻格可合法进入并退出，才参加同一次三人抢断判定。带球推进不得触发。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 93,
+      "name": "夹抢协防者",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "仅原地护球对抗：行动开始前已决定护球，持球者接触前不移动；主抢者和第二名防守者从不同相邻格可合法进入并退出，才参加同一次三人抢断判定。带球推进不得触发。 V4.4：真实抢断接触缩短；触球后立即控制或捅开，无长收势等待，成功失败与最终站位沿用原判定。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 94,
+      "name": "被断球后转身",
+      "statusV464": "仅定义身体动作，未找到独立调用",
+      "historicalTrigger": "球权变化后的独立反应属于用户暂缓的第五类",
+      "historicalStatusV418": "本阶段排除",
+      "historicalCurrentV418": "独立素材已做好；游戏保留原有失球姿势",
+      "historicalMissingV418": "不接入新增反应动画",
+      "directionNoteV418": "独立原型可旋转预览；尚未接入不触发。"
+    },
+    {
+      "id": 95,
+      "name": "封堵未挡住",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际射门线路上的封堵检定失败，且失败点不晚于最终接触点。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 96,
+      "name": "封堵后控球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "射门封堵成功且控制检定成功；接球后按合法恢复路径带离。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 97,
+      "name": "扑救未挡住",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球通过封堵后门将实际参与扑救，但扑救失败并产生进球；射偏和提前被挡不触发。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 98,
+      "name": "盯人站位调整",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得对应接应、盯防、补位、封线、前插或第二落点任务，且记录中存在合法移动；原地者不播放跑动。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "V4.16仅在对应个人职责实际移动时沿合法路径播放，不延长主事件；方向由实际路径决定。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 99,
+      "name": "补位跑动",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得对应接应、盯防、补位、封线、前插或第二落点任务，且记录中存在合法移动；原地者不播放跑动。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "V4.16仅在对应个人职责实际移动时沿合法路径播放，不延长主事件；方向由实际路径决定。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 100,
+      "name": "沿真实线路封线",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得对应接应、盯防、补位、封线、前插或第二落点任务，且记录中存在合法移动；原地者不播放跑动。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "V4.16仅在对应个人职责实际移动时沿合法路径播放，不延长主事件；方向由实际路径决定。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 101,
+      "name": "接应跑动",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得对应接应、盯防、补位、封线、前插或第二落点任务，且记录中存在合法移动；原地者不播放跑动。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "V4.16仅在对应个人职责实际移动时沿合法路径播放，不延长主事件；方向由实际路径决定。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 102,
+      "name": "拉边跑动",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得对应接应、盯防、补位、封线、前插或第二落点任务，且记录中存在合法移动；原地者不播放跑动。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "V4.16仅在对应个人职责实际移动时沿合法路径播放，不延长主事件；方向由实际路径决定。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 103,
+      "name": "迎球跑动",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得对应接应、盯防、补位、封线、前插或第二落点任务，且记录中存在合法移动；原地者不播放跑动。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "V4.16仅在对应个人职责实际移动时沿合法路径播放，不延长主事件；方向由实际路径决定。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 104,
+      "name": "前插跑动",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球员取得对应接应、盯防、补位、封线、前插或第二落点任务，且记录中存在合法移动；原地者不播放跑动。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "V4.16仅在对应个人职责实际移动时沿合法路径播放，不延长主事件；方向由实际路径决定。",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 105,
+      "name": "跟进第二落点",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "任一球队被选为无主球争抢响应者且实际跑动；真正到达者参与共同判定，无法到达者仅追球。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 106,
+      "name": "没有接到球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际抵达来球争抢点但共同判定未获球；多人争抢从结果时刻开始收势，不提前表演失手。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 107,
+      "name": "门将放球到脚下",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "门将上一结果为手持球，本事件选择脚下传球；放球到脚下后才沿烘焙路线出球。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 108,
+      "name": "门将二次收球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "同一门将上次扑救脱手，后续第二落点事件由该门将赢球。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 109,
+      "name": "跟进补射",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "射门被挡松球或扑出后，本方赢下第二落点，并在紧接的射门事件补射；球权改变或插入其他动作则取消。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 110,
+      "name": "二过一第一脚",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "受压时选择近距传球并在出球后合法前插；成功接球后保留短期配合意图，回传必须重新进入正常候选评分，失球、过期或结束配合则取消。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 111,
+      "name": "二过一回传",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "受压时选择近距传球并在出球后合法前插；成功接球后保留短期配合意图，回传必须重新进入正常候选评分，失球、过期或结束配合则取消。",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "纯动画采样，球员根位置由合法移动轨道决定",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，依据当前合法路径段、实际出球目标或接触点；不改变球路/判定。"
+    },
+    {
+      "id": 112,
+      "name": "双手掷界外球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "球整体出边线后，由对方执行；双脚保持站位，双手从头后向前释放",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "比赛与独立试播共用素材；实际播放记录云端次数与时间",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，由实际重启目标决定"
+    },
+    {
+      "id": 113,
+      "name": "球门球开球",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "进攻方最后触球出底线；防守方从小禁区内选择短传或长传",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "比赛与独立试播共用素材；实际播放记录云端次数与时间",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，由实际重启目标决定"
+    },
+    {
+      "id": 114,
+      "name": "角球发出",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "防守方最后触球出底线；选择短角球或高球传中",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "比赛与独立试播共用素材；实际播放记录云端次数与时间",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，由实际重启目标决定"
+    },
+    {
+      "id": 115,
+      "name": "任意球发出",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "身体接触犯规或越位判罚后，合法退距，传球或直接任意球射门",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "比赛与独立试播共用素材；实际播放记录云端次数与时间",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，由实际重启目标决定"
+    },
+    {
+      "id": 116,
+      "name": "点球主罚",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "本方大禁区内的直接任意球类犯规；点球点起脚，只有守门员先参与扑救",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "比赛与独立试播共用素材；实际播放记录云端次数与时间",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，由实际重启目标决定"
+    },
+    {
+      "id": 117,
+      "name": "犯规接触后收势",
+      "statusV464": "现行独立触发",
+      "historicalTrigger": "实际近距身体接触判犯规，在触球时刻吹停，受影响球员收势",
+      "historicalStatusV418": "已接入",
+      "historicalCurrentV418": "比赛与独立试播共用素材；实际播放记录云端次数与时间",
+      "historicalMissingV418": "无",
+      "directionNoteV418": "8方向，由实际重启目标决定"
+    }
+  ],
+  "activeHighlights": [
+    {
+      "id": "A05",
+      "name": "内切后射门",
+      "group": "individual",
+      "skills": [
+        "shooting",
+        "control"
+      ],
+      "condition": "上一动作已内切，当前实际选择射门",
+      "result": "完成本次内切攻门，按特殊终结参数计算成败",
+      "baseProbability": 0.012,
+      "manga": false,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "D02",
+      "name": "滑铲破坏",
+      "group": "defence",
+      "skills": [
+        "pressing",
+        "awareness"
+      ],
+      "condition": "当前存在合法铲球接触及主动抢断额度",
+      "result": "铲到球并破坏当前推进",
+      "baseProbability": 0.03,
+      "manga": false,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "S05",
+      "name": "鹰眼长传",
+      "group": "team",
+      "skills": [
+        "passing",
+        "awareness"
+      ],
+      "condition": "门将控球，前方有合法接应方案",
+      "result": "精准传球并由队友控制，不保证后续进球",
+      "baseProbability": 0.004,
+      "manga": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C01",
+      "name": "彩虹过人",
+      "family": "front-duel",
+      "group": "individual",
+      "skills": [
+        "control",
+        "dribbling"
+      ],
+      "condition": "正面有可下脚防守者；预演滑铲、过顶球路、绕行及重新控球",
+      "result": "挑球越过迎击者，绕行后重新控球",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C02",
+      "name": "跃起躲铲",
+      "family": "slide-escape",
+      "group": "individual",
+      "skills": [
+        "control",
+        "running"
+      ],
+      "condition": "邻近有可下脚防守者；预演滑铲，球与人均有合法出口",
+      "result": "避过本次滑铲并重新控球",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 45,
+      "feedbackCount": 4
+    },
+    {
+      "id": "C04",
+      "name": "回旋护球摆脱",
+      "family": "close-duel",
+      "group": "individual",
+      "skills": [
+        "control",
+        "dribbling"
+      ],
+      "condition": "实际近身迎击，侧向绕行能在原额度内完成",
+      "result": "护球回旋，从接触另一侧带离",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 10,
+      "feedbackCount": 2
+    },
+    {
+      "id": "C05",
+      "name": "双触横拨突破",
+      "family": "front-duel",
+      "group": "individual",
+      "skills": [
+        "control",
+        "dribbling"
+      ],
+      "condition": "真实正面下脚，侧向出口成立",
+      "result": "横拨避开下脚，进入防守者侧后方",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 9,
+      "feedbackCount": 4
+    },
+    {
+      "id": "C06",
+      "name": "牛尾巴变向",
+      "family": "front-duel",
+      "group": "individual",
+      "skills": [
+        "dribbling",
+        "control"
+      ],
+      "condition": "正面迎击且球可先向一侧引动再扣回",
+      "result": "球连续反向，避开本次迎击",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 35,
+      "feedbackCount": 2
+    },
+    {
+      "id": "C07",
+      "name": "急停扣回摆脱",
+      "family": "close-duel",
+      "group": "individual",
+      "skills": [
+        "control",
+        "dribbling"
+      ],
+      "condition": "对手已经接近原推进方向，侧后出口合法",
+      "result": "先制动再反向带离，保住球权",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 16,
+      "feedbackCount": 4
+    },
+    {
+      "id": "C10",
+      "name": "第一脚领球摆脱",
+      "family": "receiving-duel",
+      "group": "individual",
+      "skills": [
+        "control",
+        "carrying"
+      ],
+      "condition": "实际传球成功，接球者原位置受压，移动接球后已摆脱该人",
+      "result": "迎球第一脚进入空当；不增加一次行动",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C11",
+      "name": "弧线绕过封线",
+      "family": "line-breaking",
+      "group": "team",
+      "skills": [
+        "passing",
+        "control"
+      ],
+      "condition": "实际弧线传球成功，直线会穿过对手格而实际球路绕开",
+      "result": "绕开真实封线，完成传接",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 57,
+      "feedbackCount": 2
+    },
+    {
+      "id": "C12",
+      "name": "撞墙绕人突破",
+      "family": "combination",
+      "group": "team",
+      "skills": [
+        "passing",
+        "running"
+      ],
+      "condition": "两段真实传接完成，绕过实际防守者并向前接回",
+      "result": "回做越过迎击者，突破者实际接回",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C17",
+      "name": "倒地后二次扑救",
+      "family": "keeper-rescue",
+      "group": "defence",
+      "skills": [
+        "goalkeeping",
+        "awareness"
+      ],
+      "condition": "对方射门时禁区内有第二名进攻者；整段扑球、反弹、补射、再扑提前结算",
+      "result": "连续扑出两脚射门",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C18",
+      "name": "对抗中抢先冲顶",
+      "family": "aerial-duel",
+      "group": "individual",
+      "skills": [
+        "heading",
+        "strength"
+      ],
+      "condition": "实际空中攻门，有合法争顶对手且进攻者先触球",
+      "result": "在争顶中完成攻门；射门成败另记",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C19",
+      "name": "凌空迎球攻门",
+      "family": "aerial-finish",
+      "group": "individual",
+      "skills": [
+        "shooting",
+        "control"
+      ],
+      "condition": "真实可触球的凌空射门已出脚",
+      "result": "完成本次高难度击球；不保证进球",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C20",
+      "name": "空中抢先解围",
+      "family": "aerial-defence",
+      "group": "defence",
+      "skills": [
+        "heading",
+        "strength"
+      ],
+      "condition": "真实空中对抗，防守者赢得接触并完成解围",
+      "result": "在对手攻门前将球顶走",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C21",
+      "name": "射门前抢先捅球",
+      "family": "close-defence",
+      "group": "defence",
+      "skills": [
+        "pressing",
+        "awareness"
+      ],
+      "condition": "对手准备射门，近身防守者可先碰到脚下球",
+      "result": "在射门出脚前捅走球",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "C24",
+      "name": "抢先切断穿透球",
+      "family": "recovery-defence",
+      "group": "defence",
+      "skills": [
+        "pressing",
+        "awareness"
+      ],
+      "condition": "实际拦截危险向前传球，防守者从球路外移动进真实经过格",
+      "result": "及时切断即将送到危险接应点的传球",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 24,
+      "feedbackCount": 3
+    },
+    {
+      "id": "C26",
+      "name": "穿透防线的直塞",
+      "family": "line-breaking",
+      "group": "team",
+      "skills": [
+        "passing",
+        "awareness"
+      ],
+      "condition": "真实地面空间球越过至少两名防守者，跑动接应进入危险区域",
+      "result": "穿过防线送到前插者；不保证后续攻门",
+      "baseProbability": 0.22,
+      "manga": false,
+      "contextual": true,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 39,
+      "feedbackCount": 2
+    },
+    {
+      "id": "N01",
+      "name": "受压一脚穿线",
+      "group": "team",
+      "skills": [
+        "passing",
+        "control"
+      ],
+      "condition": "受压接应者与下一出球点同时存在",
+      "result": "连续出球越过压迫",
+      "baseProbability": 0.025,
+      "manga": false,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 28,
+      "feedbackCount": 2
+    },
+    {
+      "id": "N02",
+      "name": "挑传越过上抢者",
+      "group": "team",
+      "skills": [
+        "passing",
+        "control"
+      ],
+      "condition": "前方有人封地面，身后有队友",
+      "result": "挑传越过上抢者并接球",
+      "baseProbability": 0.025,
+      "manga": false,
+      "hasDedicatedBodyV464": true,
+      "reviewTenGameCountIfAvailable": 18,
+      "feedbackCount": 2
+    },
+    {
+      "id": "N03",
+      "name": "横拨摆脱后直接起脚",
+      "group": "individual",
+      "skills": [
+        "dribbling",
+        "shooting"
+      ],
+      "condition": "侧向可形成射门空间",
+      "result": "横拨后直接攻门，成败原生结算",
+      "baseProbability": 0.025,
+      "manga": false,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    },
+    {
+      "id": "N04",
+      "name": "反跑甩盯防接球",
+      "group": "individual",
+      "skills": [
+        "running",
+        "control"
+      ],
+      "condition": "队友受盯，周围有空间",
+      "result": "反跑甩开盯防并接球",
+      "baseProbability": 0.025,
+      "manga": false,
+      "hasDedicatedBodyV464": false,
+      "reviewTenGameCountIfAvailable": null,
+      "feedbackCount": 0
+    }
+  ],
+  "currentRoutines": [
+    {
+      "id": "EX_A05",
+      "name": "内切后射门",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 2
+    },
+    {
+      "id": "EX_D02",
+      "name": "滑铲破坏",
+      "group": "defence",
+      "highlightGroup": "defence",
+      "steps": 1
+    },
+    {
+      "id": "EX_S05",
+      "name": "鹰眼长传",
+      "group": "attack",
+      "highlightGroup": "team",
+      "steps": 1
+    },
+    {
+      "id": "EX_C01",
+      "name": "彩虹过人",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "EX_C02",
+      "name": "跃起躲铲",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "EX_C04",
+      "name": "回旋护球摆脱",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "EX_C05",
+      "name": "双触横拨突破",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "EX_C06",
+      "name": "牛尾巴变向",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "EX_C07",
+      "name": "急停扣回摆脱",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "EX_C10",
+      "name": "第一脚领球摆脱",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "EX_C11",
+      "name": "弧线绕过封线",
+      "group": "attack",
+      "highlightGroup": "team",
+      "steps": 1
+    },
+    {
+      "id": "EX_C12",
+      "name": "撞墙绕人突破",
+      "group": "attack",
+      "highlightGroup": "team",
+      "steps": 2
+    },
+    {
+      "id": "EX_C17",
+      "name": "倒地后二次扑救",
+      "group": "defence",
+      "highlightGroup": "defence",
+      "steps": 1
+    },
+    {
+      "id": "EX_C18",
+      "name": "对抗中抢先冲顶",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 2
+    },
+    {
+      "id": "EX_C19",
+      "name": "凌空迎球攻门",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 2
+    },
+    {
+      "id": "EX_C20",
+      "name": "空中抢先解围",
+      "group": "defence",
+      "highlightGroup": "defence",
+      "steps": 1
+    },
+    {
+      "id": "EX_C21",
+      "name": "射门前抢先捅球",
+      "group": "defence",
+      "highlightGroup": "defence",
+      "steps": 1
+    },
+    {
+      "id": "EX_C24",
+      "name": "抢先切断穿透球",
+      "group": "defence",
+      "highlightGroup": "defence",
+      "steps": 1
+    },
+    {
+      "id": "EX_C26",
+      "name": "穿透防线的直塞",
+      "group": "attack",
+      "highlightGroup": "team",
+      "steps": 1
+    },
+    {
+      "id": "EX_N01",
+      "name": "受压一脚穿线",
+      "group": "attack",
+      "highlightGroup": "team",
+      "steps": 2
+    },
+    {
+      "id": "EX_N02",
+      "name": "挑传越过上抢者",
+      "group": "attack",
+      "highlightGroup": "team",
+      "steps": 1
+    },
+    {
+      "id": "EX_N03",
+      "name": "横拨摆脱后直接起脚",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 2
+    },
+    {
+      "id": "EX_N04",
+      "name": "反跑甩盯防接球",
+      "group": "attack",
+      "highlightGroup": "individual",
+      "steps": 1
+    },
+    {
+      "id": "RF01",
+      "name": "果断攻门—前插抢点与身后接应",
+      "group": "attack",
+      "steps": 1
+    },
+    {
+      "id": "CA01",
+      "name": "直塞边路—传中—门前争顶",
+      "group": "attack",
+      "steps": 3
+    },
+    {
+      "id": "CA02",
+      "name": "边路接应—横传或倒三角—攻门",
+      "group": "attack",
+      "steps": 3
+    },
+    {
+      "id": "CA03",
+      "name": "做墙绕人—回做突破",
+      "group": "attack",
+      "steps": 2
+    },
+    {
+      "id": "CA04",
+      "name": "回接做球—第三人前插",
+      "group": "attack",
+      "steps": 2
+    },
+    {
+      "id": "CA05",
+      "name": "强侧接应—弱侧转移",
+      "group": "attack",
+      "steps": 2
+    },
+    {
+      "id": "CA06",
+      "name": "夺球出球—斜插反击",
+      "group": "transition",
+      "steps": 2
+    },
+    {
+      "id": "RA01",
+      "name": "后场三角—向中场递进",
+      "group": "build",
+      "steps": 2
+    },
+    {
+      "id": "RA02",
+      "name": "中场连接—向前发展",
+      "group": "build",
+      "steps": 2
+    },
+    {
+      "id": "RA03",
+      "name": "边路推进—前插接应",
+      "group": "attack",
+      "steps": 2
+    },
+    {
+      "id": "RA04",
+      "name": "中路带动—前插与短接应",
+      "group": "build",
+      "steps": 2
+    },
+    {
+      "id": "RA05",
+      "name": "受压斜传—向前解压",
+      "group": "transition",
+      "steps": 2
+    },
+    {
+      "id": "RA06",
+      "name": "门将短开—后场接力",
+      "group": "build",
+      "steps": 2
+    },
+    {
+      "id": "RA07",
+      "name": "前场输送—就近终结或突破",
+      "group": "attack",
+      "steps": 2
+    },
+    {
+      "id": "RD01",
+      "name": "前迎持球人—身后补位",
+      "group": "defence",
+      "steps": 1
+    },
+    {
+      "id": "RD02",
+      "name": "边路施压—内侧保护",
+      "group": "defence",
+      "steps": 1
+    },
+    {
+      "id": "RD03",
+      "name": "封接应区域—保护中路通道",
+      "group": "defence",
+      "steps": 1
+    },
+    {
+      "id": "RD04",
+      "name": "延缓反击—回收保护身后",
+      "group": "defence",
+      "steps": 1
+    },
+    {
+      "id": "RD05",
+      "name": "争抢松球—接应与防反保护",
+      "group": "transition",
+      "steps": 1
+    },
+    {
+      "id": "RD06",
+      "name": "争顶干扰—二点保护",
+      "group": "defence",
+      "steps": 1
+    },
+    {
+      "id": "RD07",
+      "name": "射门施压—封线与二点保护",
+      "group": "defence",
+      "steps": 1
+    }
+  ],
+  "review": [
+    {
+      "id": "C02",
+      "name": "跃起躲铲",
+      "group": "individual",
+      "count10": 45,
+      "matchesSeen": 10,
+      "sceneLabels10": 45,
+      "condition": "带球者先拨走球，防守者朝球路方向横身滑铲；带球者跃过后继续控球，人物造型不画脚",
+      "result": "避过本次滑铲并重新控球",
+      "playback": "body-integrated",
+      "phases": [
+        "球先脱离铲截线",
+        "防守者滑行",
+        "跃起躲铲",
+        "落地继续带球"
+      ],
+      "sourceMatch": "dice-attack-normal-2026102103-on-roster.json",
+      "sourceEvent": 6
+    },
+    {
+      "id": "C05",
+      "name": "双触横拨突破",
+      "group": "individual",
+      "count10": 9,
+      "matchesSeen": 7,
+      "sceneLabels10": 9,
+      "condition": "防守者位于正前方相邻格；持球者先拨向一侧诱使其跟随，再从另一侧穿过对手所在格，最终进入其身后一格",
+      "result": "横拨避开下脚，进入防守者侧后方",
+      "playback": "body-integrated",
+      "phases": [
+        "侧拨诱使防守者跟随",
+        "反向触球",
+        "从防守者身后带离"
+      ],
+      "sourceMatch": "dice-attack-normal-2026102103-on-roster.json",
+      "sourceEvent": 94
+    },
+    {
+      "id": "C06",
+      "name": "牛尾巴变向",
+      "group": "individual",
+      "count10": 35,
+      "matchesSeen": 10,
+      "sceneLabels10": 35,
+      "condition": "正面迎击且球可先向一侧引动再扣回",
+      "result": "球连续反向，避开本次迎击",
+      "playback": "body-integrated",
+      "phases": [
+        "同脚外侧拨球",
+        "立刻内侧扣回",
+        "加速带离"
+      ],
+      "sourceMatch": "dice-attack-normal-2026102103-on-roster.json",
+      "sourceEvent": 80
+    },
+    {
+      "id": "C07",
+      "name": "急停扣回摆脱",
+      "group": "individual",
+      "count10": 16,
+      "matchesSeen": 9,
+      "sceneLabels10": 16,
+      "condition": "双方位于同一纵深、并排向前；持球者突然刹停扣回一格，防守者继续冲过",
+      "result": "先制动再反向带离，保住球权",
+      "playback": "body-integrated",
+      "phases": [
+        "并行向前",
+        "持球人急停，防守者继续冲",
+        "冲过头后才刹车"
+      ],
+      "sourceMatch": "dice-attack-normal-2026102108-on-roster-coaching2.json",
+      "sourceEvent": 55
+    },
+    {
+      "id": "C04",
+      "name": "回旋护球摆脱",
+      "group": "individual",
+      "count10": 10,
+      "matchesSeen": 8,
+      "sceneLabels10": 10,
+      "condition": "防守者留在原格作为回旋中心；持球者从其一侧绕半圈到另一侧，球始终在外侧",
+      "result": "护球回旋，从接触另一侧带离",
+      "playback": "body-integrated",
+      "phases": [
+        "护球启动",
+        "身体回旋一周",
+        "带球离开"
+      ],
+      "sourceMatch": "dice-defend-normal-2026102109-on-roster.json",
+      "sourceEvent": 67
+    },
+    {
+      "id": "C11",
+      "name": "弧线绕过封线",
+      "group": "team",
+      "count10": 57,
+      "matchesSeen": 10,
+      "sceneLabels10": 57,
+      "condition": "实际弧线传球成功，直线会穿过对手格而实际球路绕开",
+      "result": "绕开真实封线，完成传接",
+      "playback": "body-integrated",
+      "phases": [
+        "直线传球线路受封",
+        "球绕出弧线",
+        "队友在另一侧接球"
+      ],
+      "sourceMatch": "dice-attack-normal-2026102103-on-roster.json",
+      "sourceEvent": 71
+    },
+    {
+      "id": "N01",
+      "name": "受压一脚穿线",
+      "group": "team",
+      "count10": 28,
+      "matchesSeen": 10,
+      "sceneLabels10": 28,
+      "condition": "前一脚传给受压队友，该队友下一行动直接将球传给第三人，实际两脚均传成",
+      "result": "连续出球越过压迫",
+      "playback": "body-integrated",
+      "phases": [
+        "第一脚传给受压队友",
+        "队友不停球立即传出",
+        "第三人接到"
+      ],
+      "sourceMatch": "dice-attack-normal-2026102103-on-roster.json",
+      "sourceEvent": 19
+    },
+    {
+      "id": "N02",
+      "name": "挑传越过上抢者",
+      "group": "team",
+      "count10": 18,
+      "matchesSeen": 10,
+      "sceneLabels10": 18,
+      "condition": "防守者实际位于球路中间，挑球高度越过其头顶，同队接应者控制球",
+      "result": "挑传越过上抢者并接球",
+      "playback": "body-integrated",
+      "phases": [
+        "防守者封住地面",
+        "挑传越过迎击脚",
+        "队友接到高球"
+      ],
+      "sourceMatch": "dice-defend-normal-2026102104-on-roster.json",
+      "sourceEvent": 27
+    },
+    {
+      "id": "C26",
+      "name": "穿透防线的直塞",
+      "group": "team",
+      "count10": 39,
+      "matchesSeen": 10,
+      "sceneLabels10": 39,
+      "condition": "队友朝正前、左前或右前空当跑；直线地滚球穿过一名防守者所在格，他伸脚未勾到",
+      "result": "直线地滚球穿过防守者一格，伸脚未勾到，同队前插者接球",
+      "playback": "body-integrated",
+      "phases": [
+        "前插者启动",
+        "地面直塞越过防线",
+        "前插者接球"
+      ],
+      "sourceMatch": "dice-attack-normal-2026102103-on-roster.json",
+      "sourceEvent": 73
+    },
+    {
+      "id": "C24",
+      "name": "抢先切断穿透球",
+      "group": "defence",
+      "count10": 24,
+      "matchesSeen": 10,
+      "sceneLabels10": 24,
+      "condition": "防守者由球路外切入实际经过格，提前断球并在该格控制；近端长传弹球不标为抢断控制",
+      "result": "防守者先用身体碰到球，将球拨向侧方，随后追上并在拦截格控制；此次不是松球",
+      "playback": "body-integrated",
+      "phases": [
+        "向前传球",
+        "防守者碰球拨开",
+        "追上弹球并控制"
+      ],
+      "sourceMatch": "dice-wing-normal-2026102102-on-roster.json",
+      "sourceEvent": 85
+    }
+  ],
+  "userFeedback": [
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "0a651bd3-2e90-4480-91bb-a5fe8559b811",
+      "scene_id": "C26",
+      "body": "直塞是走直线的，其实穿一个这个格也可以，直接穿过去就好，对手可以表现一个踉跄，想伸脚勾的没勾着",
+      "created_at": "2026-10-21T03:11:05.748Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "0cc6c5ed-ba6a-4d70-867a-1764a1002a87",
+      "scene_id": "C04",
+      "body": "不是，这一招用的是直接旋转的方式，以对手为圆心，然后画了一个圆到了对手的另一侧，比如说可以从左侧到对手的右侧，从对手的前侧到后侧",
+      "created_at": "2026-10-21T03:09:06.634Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "0d192e0b-1c0c-4a50-88e6-60d5b0964f3f",
+      "scene_id": "N01",
+      "body": "对手突然出现又突然消失，这个不行的",
+      "created_at": "2026-10-21T03:09:58.331Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "16939e6b-3f80-4b24-ae14-ce10e75f457f",
+      "scene_id": "C05",
+      "body": "不是防守队员要有一个刹不住车的动作，就是被骗到了一边之后，然后进攻队员再从他的另一侧走掉之后",
+      "created_at": "2026-10-21T03:07:54.290Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "1b358e21-466b-4397-80cc-0e0c4d5ef0b7",
+      "scene_id": "C02",
+      "body": "球员直接身体横过来就好，不用变矮",
+      "created_at": "2026-10-21T03:07:17.066Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "1cb5d047-f345-4f96-8420-640eced0fb4d",
+      "scene_id": "C07",
+      "body": "防守队员需要连贯一点是直到被甩开了才刹车刹过来，而不是中间有个停顿",
+      "created_at": "2026-10-21T05:10:12.542Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "2a8aacc5-6519-437c-b6a0-24176173f29c",
+      "scene_id": "C02",
+      "body": "铲球的方向不对，肯定是对着球铲的，另外所有的动画建模都不要出现脚",
+      "created_at": "2026-10-21T05:09:18.654Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "5b57c794-88ae-41b0-8cdd-b74cc298c69d",
+      "scene_id": "C06",
+      "body": "这个也做的太不像了，再上网研究一下到底什么是牛尾巴？",
+      "created_at": "2026-10-21T00:56:15.045Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "5e46b8ca-a873-4722-aba0-b2ea588b2348",
+      "scene_id": "C26",
+      "body": "这个可以的，直塞可能还会往进攻队员的左前方或者右前方来直塞，不一定是正前方",
+      "created_at": "2026-10-21T00:58:46.131Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "6429b2a3-1dbe-49fa-bc2e-731329bdc61c",
+      "scene_id": "C05",
+      "body": "这个动作只有面对防守队员，且需要往防守队员的身后进攻的时候，带球的时候才会出现",
+      "created_at": "2026-10-21T05:09:40.011Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "682e9981-c09b-4f0a-9878-190b460003c6",
+      "scene_id": "C06",
+      "body": "不用出现脚",
+      "created_at": "2026-10-21T05:09:52.877Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "77c4923c-0533-4265-8f20-fa4fdff45126",
+      "scene_id": "C02",
+      "body": "防守队员是铲球，而不是突然变矮，",
+      "created_at": "2026-10-21T00:54:51.888Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "7898dca0-24c1-45fb-9ff9-0d0539c71e6f",
+      "scene_id": "C11",
+      "body": "弧线不是这样用的，得体现出绕过防守队员的感觉，甚至弧线的弧度可以再夸张一点，可以参考一下德布劳内的外脚背的那种弧线",
+      "created_at": "2026-10-21T00:57:36.951Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "87a86f2f-39d3-42ef-8fc9-ac75bc6aba18",
+      "scene_id": "N01",
+      "body": "受压迫的一脚传球不是这个意思，而是说有对方来上抢的时候，自己能和队友完成连续传递，并且传球的路线都上面都是没有队友的，就是体现出那种连续的毫不犹豫的不停球的直接传球",
+      "created_at": "2026-10-21T00:58:06.557Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "a36bb302-c225-4665-820d-96faca8e6587",
+      "scene_id": "C24",
+      "body": "球被拦截下来之后位置不对",
+      "created_at": "2026-10-21T00:59:02.793Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "a90f57b2-1fa6-4e60-a0da-5c48709e6abf",
+      "scene_id": "C24",
+      "body": "说的动画永远不要出现把球吸到脚上的动作，是可以用身体来碰一下，然后把球拨向一边，然后最后控制在脚上",
+      "created_at": "2026-10-21T05:11:23.158Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "ab563115-db8d-4d21-9983-1a36e02183c4",
+      "scene_id": "N02",
+      "body": "这个球传给对方了呀，这失败了呀",
+      "created_at": "2026-10-21T00:58:18.791Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "bbbe3ad3-cb11-4ac0-96f9-f35d25498521",
+      "scene_id": "C07",
+      "body": "双方是先是并排的样子，然后最后进攻队员会比防守队员往前或者往后一格而摆脱并排的样子，这个才是这个动画的最终目的",
+      "created_at": "2026-10-21T05:39:25.358Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "c674840a-370d-4233-9f7f-e464b2f34df1",
+      "scene_id": "N02",
+      "body": "你看一下触发条件，这个是要越过对手的头顶的",
+      "created_at": "2026-10-21T03:10:36.267Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "c67c9770-a13a-40ae-946f-fa883610be5a",
+      "scene_id": "C07",
+      "body": "不是，是双方并排，也就是说双方在开始的时候离底线的距离是一样的，这个叫并排，而不是前后",
+      "created_at": "2026-10-21T03:08:35.381Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "cacdca78-9cf8-49cf-b4e1-26fb443a1da5",
+      "scene_id": "C11",
+      "body": "这一个即使不用曲线也可以直接绕开对手吧，好像不是特别明显，再明显一点",
+      "created_at": "2026-10-21T03:09:41.469Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "d8926d56-4dd5-41d1-ad81-818011cc4436",
+      "scene_id": "C05",
+      "body": "防守队员被晃到一边之后，应该不会回到原来的位置了",
+      "created_at": "2026-10-21T05:38:42.912Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "dd9ad2f1-c1a0-4712-b1a8-3c99fe5036d7",
+      "scene_id": "C02",
+      "body": "不对，他这个依然没有照着球去铲。如果要铲球的话，防守队员，带球的进攻队员以及防守队员铲完之后落到了位置，应该是在一条线上面三个格子。",
+      "created_at": "2026-10-21T05:38:21.734Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "e5f4fa97-a8ae-42e2-8cfa-b7c08f59f75e",
+      "scene_id": "C05",
+      "body": "比如先拨到一个方向，然后防守队员就会跟到那个方向过去，然后进攻队员再往另一个方向走，期间不需要穿越到左边或者右边的格子，就在进攻队员和防守队员所在的格子就能完成这个动画，最后防守队员还是在原地，但是进攻队员穿过了防守队员，到了防守队员后面",
+      "created_at": "2026-10-21T00:55:55.782Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "ea1b6e6d-87bb-4430-aa91-c4ac84fdf389",
+      "scene_id": "C24",
+      "body": "这个球没有被抢下来，目前这样看",
+      "created_at": "2026-10-21T03:11:28.191Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "faf176a9-446a-47cb-8e16-eaacdd99300d",
+      "scene_id": "C07",
+      "body": "一般这种回扣摆托是进攻队员和防守队员都往前跑，两边并行往前跑，然后进攻队员突然之间停下了往前的趋势，而是往后走了一个，这样就摆脱了防守队员",
+      "created_at": "2026-10-21T00:56:49.542Z"
+    },
+    {
+      "board_id": "e4d14dc0-8e16-40fa-9540-8a1663b85eaa",
+      "comment_id": "ff3e3f74-066e-40e6-8c49-605ef19aaeb2",
+      "scene_id": "C04",
+      "body": "没有体验出回旋",
+      "created_at": "2026-10-21T00:57:00.960Z"
+    }
+  ],
+  "removedFromCurrentHighlightCatalog": [
+    "A01",
+    "A08",
+    "A10",
+    "D01",
+    "D04",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "C13",
+    "C16"
+  ]
+}
